@@ -24,6 +24,7 @@ public:
     }
 
     void update() {
+        this->velocity.y += 0.05;
         shape.move(velocity);
     }
 
@@ -61,27 +62,27 @@ int main() {
                 window.close();
         }
 
-        if (clock.getElapsedTime().asSeconds() > 0.05f) {
+        if (clock.getElapsedTime().asSeconds() > 0.03f) {
             particles.push_back(Particle(sf::Vector2f(400, 300))); // Generate new particle
             clock.restart();
         }
 
-        if (clock2.getElapsedTime().asSeconds() > 0.05f) {
+        if (clock2.getElapsedTime().asSeconds() > 0.03f) {
             particles.push_back(Particle(sf::Vector2f(600, 200))); // Generate new particle
             clock2.restart();
         }
 
-        if (clock3.getElapsedTime().asSeconds() > 0.05f) {
+        if (clock3.getElapsedTime().asSeconds() > 0.03f) {
             particles.push_back(Particle(sf::Vector2f(200, 400))); // Generate new particle
             clock3.restart();
         }
 
-        if (clock4.getElapsedTime().asSeconds() > 0.05f) {
+        if (clock4.getElapsedTime().asSeconds() > 0.03f) {
             particles.push_back(Particle(sf::Vector2f(200, 200))); // Generate new particle
             clock4.restart();
         }
 
-        if (clock5.getElapsedTime().asSeconds() > 0.05f) {
+        if (clock5.getElapsedTime().asSeconds() > 0.03f) {
             particles.push_back(Particle(sf::Vector2f(400, 400))); // Generate new particle
             clock5.restart();
         }
